@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    // modo atualizado para usar a tag <Image />
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+    ],
 
-export default nextConfig;
+    // modo antigo:
+    // domains: ['github.com'],
+  },
+}
+
+export default nextConfig
